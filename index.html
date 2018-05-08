@@ -1,0 +1,142 @@
+<!-- 
+ @author: Erika Hairston
+ created on: 05/18
+ -->
+<html>
+	<head>
+		<style type="text/css">
+			h1, h2, h3 {
+				color: blue;
+				text-align: center;
+				opacity: .5;
+			}
+			p, div {
+				text-align: center;
+				margin: 0 20%;
+			}
+			/*https://www.bestcssbuttongenerator.com/#/21 */
+			.myButton {
+				-moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+				-webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+				box-shadow:inset 0px 1px 0px 0px #efdcfb;
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #bc80ea));
+				background:-moz-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+				background:-webkit-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+				background:-o-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+				background:-ms-linear-gradient(top, #dfbdfa 5%, #bc80ea 100%);
+				background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
+				background-color:#dfbdfa;
+				-moz-border-radius:6px;
+				-webkit-border-radius:6px;
+				border-radius:6px;
+				border:1px solid #c584f3;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family:Arial;
+				font-size:15px;
+				font-weight:bold;
+				padding:6px 24px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #9752cc;
+			}
+			.myButton:hover {
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc80ea), color-stop(1, #dfbdfa));
+				background:-moz-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+				background:-webkit-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+				background:-o-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+				background:-ms-linear-gradient(top, #bc80ea 5%, #dfbdfa 100%);
+				background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
+				background-color:#bc80ea;
+			}
+			.myButton:active {
+				position:relative;
+				top:1px;
+			}
+        
+		</style>
+		<h1> Repunity:  </h1>
+		<h2> A community by and for underrepresented role models.</h2>
+		<h3> By: Erika Alexandra Hairston </32>
+		<h3> Advised By: Professor Ruzica Piskac </h3>
+	</head>
+	<body>
+		<h3> Abstract </h3>
+		<p>
+			For my culmination of study in the Computer Science department at Yale, I chose to tackle an issue that has colored my entire experience as an undergraduate in a highly homogenous major. I came into college with no clue of what code even was, let alone how to create and innovate with it. However, the one thing I knew for sure was that I had never seen anyone that looked like me in the field. This did not change at Yale, nor in Silicon Valley today. This app, what I call Repunity, aims to tackle that severe issue of underrepresentation. In this paper, I discuss technical aspects of my final project along with my learning trajectory teaching myself iOS. 
+			</br>
+			<br>
+			Repunity serves as a database of underrepresented individuals that can be filtered by identifiers and suggest Role Models to you based on your user Profile. I aggregate user information to suggest helpful resources that may be relevant to your identity and professional path. I also began the process of implementing messaging functionality for users to reach out to Role Models. My goals of this project were: 1) use technical skills that I’ve gained to tackle a critical issue in my community, 2) submerge myself in the app development cycle from ideation to deployment, learning difficulties around choices and mobile specific technologies, 3) best prepare myself for a role in Product Management at industry level where I will be focused on design, analytics, and user-first decisions.
+			<br> 
+			<br>
+			Repunity has been one of the most valuable projects to work because of how much it solidified my confidence as a computer scientists that strives for optimal time complexity, data structures,  and ease of UI -- all topics I learned from internships, electives, and core classes in my time at Yale. 
+
+		</p>
+
+		<div> 
+			<h2>
+				<i> Links </i> 
+			</h2>	
+		</div>
+		<div>
+			<button class="myButton" onclick="openProjectProposal()"> Project Proposal </button>
+			<button class="myButton" onclick="openProjectReport()"> Project Report </button>
+			<button class="myButton" onclick="openProjectCode()"> Project Code </button>
+
+			<video width="300" height="700" controls>
+  		<source src="./Repunitydemo.mov" type="video/mp4">
+		</video>
+
+		</div>
+
+		
+
+		<br />
+		<br />
+		<br />
+		<div>	
+			<image class="mySlides" src="./beyonce.jpg"/>
+			<image class="mySlides" src="./michelleobama.jpg" />
+			<image class="mySlides" src="./janellemonae.jpg" />
+		</div>
+		<script type="text/javascript">
+			var slideIndex = 0;
+			carousel();
+
+			function carousel() {
+			    var i;
+			    var x = document.getElementsByClassName("mySlides");
+			    for (i = 0; i < x.length; i++) {
+			      x[i].style.display = "none"; 
+			    }
+			    slideIndex++;
+			    if (slideIndex > x.length) {slideIndex = 1} 
+			    x[slideIndex-1].style.display = "block"; 
+			    x[slideIndex-1].style.marginLeft = "auto";
+			    x[slideIndex-1].style.marginRight = "auto";  
+			    setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+
+			function openProjectProposal(){
+				window.open(
+				  "./490-Project-proposal.pdf",
+				  '_blank' 
+				);
+			}
+			function openProjectReport(){
+				window.open(
+				  "./ReportHairston.pdf",
+				  '_blank' 
+				);
+			}
+			function openProjectCode(){
+				window.open(
+				  "./Repunity.zip",
+				  '_blank' 
+				);
+			}
+		</script>	
+	</body>
+</html>
